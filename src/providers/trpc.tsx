@@ -24,7 +24,7 @@ const TrpcProvider = ({ children }: TrpcProviderProps) => {
     trpc.createClient({
       links: [
         httpBatchLink({
-          url: "http://localhost:3000/trpc",
+          url: "https://brainstation-voting-exercise.herokuapp.com/trpc",
           fetch(url, options) {
             return fetch(url, { ...options, credentials: "include" });
           },
