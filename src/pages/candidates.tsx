@@ -56,8 +56,8 @@ const Candidates = () => {
             setCandidateId(e.target.value);
           }}
         >
-          {candidatesQuery.data?.map((candidate) => (
-            <MenuItem value={candidate._id}>
+          {candidatesQuery.data?.map((candidate, index) => (
+            <MenuItem key={index} value={candidate._id}>
               {candidate.name}
               &nbsp;&nbsp;
               <b>{candidate.party}</b>

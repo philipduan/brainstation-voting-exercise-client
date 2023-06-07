@@ -30,7 +30,9 @@ const TrpcProvider = ({ children }: TrpcProviderProps) => {
           },
           headers() {
             if (token) {
-              return { Authorization: `Bearer ${token}` };
+              return {
+                Authorization: `Bearer ${token}`,
+              };
             }
             return {};
           },
